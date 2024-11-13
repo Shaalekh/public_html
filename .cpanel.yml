@@ -1,5 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/qrsrajxy/repositories/html_file
-    - /bin/cp -R . ${DEPLOYPATH}
+    # Define the deployment path.
+    - export DEPLOYPATH=/home/qrsrajxy/repositories/html_file/
+
+    # Copy all files, including hidden files, to the deployment path.
+    - rsync -avz --exclude='.git' ./ $DEPLOYPATH
