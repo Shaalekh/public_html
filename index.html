@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat&family=Playfair+Display&family=Raleway&family=Roboto&family=Roboto+Slab&family=Tsukimi+Rounded:wght@300&display=swap"
+        rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("Images/depositphotos_5114765-stock-photo-tea-plantations.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: right;
+            margin: 0;
+        }
+
+        #h3 {
+            background-color: rgb(0, 75, 0);
+            color: white;
+            font-family: "tsukimi rounded", system-ui;
+            margin: 0px;
+            text-align: center;
+            top: 0;
+            font-weight: lighter;
+            position: sticky;
+            padding: 1rem 0rem;
+            z-index: 3;
+        }
+
+        .contain {
+            position: relative;
+            font-family: Arial;
+        }
+
+        .text-block {
+            position: absolute;
+            background: inherit;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            background-color: whitesmoke;
+            mix-blend-mode: screen;
+            font-size: 6vh;
+            padding: 0vh 2vh;
+            font-family: "Raleway", sans-serif;
+        }
+
+        /*-webkit-background-clip:content-box;*/
+        @media screen and (max-width: 700px) {
+            .text-block {
+                transform: none;
+                top: unset;
+                left: unset;
+                width: 100%;
+                margin: 0;
+                transition-duration: 0.3s;
+                padding: 0;
+                display: contents;
+                mix-blend-mode: unset;
+                font-size: inherit;
+            }
+
+            .contain {
+                margin: 0;
+                padding: 0;
+            }
+
+            img {
+                margin: 0;
+                padding: 0;
+            }
+
+            #title {
+                padding: 20px 0% !important;
+            }
+        }
+
+        .snake {
+            display: grid;
+            grid-column-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+        }
+
+        .kabutar {
+            margin: 2%;
+        }
+
+        .intro {
+            text-align: center;
+            background-color: forestgreen;
+            color: white;
+            padding: 10px 0px;
+            margin: 0;
+            font-family: "Montserrat";
+        }
+
+        .p {
+            font-family: "Montserrat";
+            background-color: rgb(215, 255, 156);
+            text-align: center;
+            padding: 2vh;
+            margin: 0;
+        }
+
+        .supo {
+            max-width: 100%;
+            border: 1vh solid white;
+            /*margin-left: auto;
+            margin-right: auto;*/
+        }
+
+        #Supo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .field {
+            text-align: center;
+            max-width: fit-content;
+        }
+
+        .figcap {
+            display: block;
+            background-color: white;
+            text-align: center;
+            font-family: Montserrat, Serif;
+        }
+
+        #ceo {
+            width: fit-content;
+            box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, 0.5);
+            border-radius: 1em;
+            display: inline-block;
+            margin-left: 1em;
+        }
+
+        #photo {
+            display: block;
+            border-top-left-radius: 1em;
+            border-top-right-radius: 1em;
+            width: 100%;
+        }
+
+        #aboutMe {
+            background-color: white;
+            margin: 0;
+            text-align: center;
+            display: inline-block;
+            padding: 0px 2px !important;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #contactMe {
+            background-color: black;
+            color: white;
+            font-family: system-ui;
+            font-weight: lighter;
+            margin: 0;
+            text-align: center;
+            padding: 1rem 0px;
+            border-bottom-left-radius: 1em;
+            border-bottom-right-radius: 1em;
+            transition-duration: 500ms;
+        }
+
+        #contactMe:hover {
+            background-color: white;
+            color: black;
+            font-weight: normal;
+            transition-duration: 500ms;
+        }
+
+        @media screen and (max-width: 600px) {
+            #ceo {
+                display: block !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        #sideform {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('Images/black-panther-trailer-32.jpg');
+            float: right;
+            border-radius: 1em;
+            height: 460px;
+            width: 76%;
+            margin-right: 1rem;
+            box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, 0.5);
+        }
+
+        #title {
+            text-align: center;
+            margin: 0;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            padding: 2% 0%;
+            background-color: rgb(0, 0, 0, 0.5);
+            color: aliceblue;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @media screen and (max-width:1000px) {
+            #sideform {
+                float: none;
+                display: block !important;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 1rem;
+                width: 91%;
+                background-position: center;
+            }
+
+
+        }
+
+        footer {
+            height: 200px;
+            background-color: rgb(0, 18, 0);
+            margin-top: 1rlh;
+            padding-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .list,
+        .anchor {
+            color: lightgray;
+            padding: 10px;
+            text-decoration: none;
+
+        }
+
+        .anchor:hover,
+        .anchor:visited {
+            color: darkgray;
+        }
+
+        cite {
+            background-color: rgb(0, 18, 0);
+            display: block;
+            color: grey;
+            font-size: smaller;
+            text-align: right;
+            margin: 0;
+            padding: 0px 10px;
+        }
+
+        form {
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(0%, 50%);
+        }
+
+        .imput {
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            font-family: 'Raleway';
+            font-size: 1rem;
+            padding: 1em 2em;
+            color: snow;
+            margin: 5px;
+        }
+
+        .imput:focus {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white !important;
+        }
+
+        #submit {
+            padding: 1em 3em;
+            margin: 2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 2em;
+            color: snow;
+            font-family: 'Raleway';
+            font-size: 1em;
+            border: 2px solid snow;
+        }
+
+        #submit:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        main::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="h3">MASAI FORCE</h3>
+    <div class="contain">
+        <img src="Images/bp2.jpg" alt="Atanki" style="width: 100%" />
+        <div class="text-block">
+            <h2>Wakanda Forever!</h2>
+        </div>
+    </div>
+    <div class="snake">
+        <div class="kabutar">
+            <h3 class="intro">Introduction</h3>
+            <p class="p">
+                The armed branch of NMSC is Masai Force. 'Masai Force' derive its name from the Masai tribe of East
+                Africa. The language spoken here is Maa language. Since Wakanda has established friendly relations with
+                outer world, Masai Force has accepted the proposal of training of foreign cadets here.
+            </p>
+        </div>
+        <div class="kabutar">
+            <h3 id="History" class="intro">History</h3>
+            <p class="p">
+                In the 5th century, a tribe of African warriors and conquerors came to Wakanda, following a path of
+                victory. Later that tribe got to known as Masai Tribe. By the time passed, Wakanda evolved so as Masai
+                tribe. Since her birth Wakanda has been fighting against the aquisitiveness of capturing her of outer
+                world.
+            </p>
+        </div>
+        <div class="kabutar">
+            <h3 class="intro">Training</h3>
+            <p class="p">
+                Cadets are called 'Ikadethi' and lady cadets are called 'Tazuni' in Maa language. Ikadethis are trained
+                at Sigma Academy, located at Wakanda. From traditional tribal fighting skills to modern combat, the
+                training given is world class. Each Ikadethi is sized up in every condition and moulded into a war
+                machine of steel.
+            </p>
+        </div>
+    </div>
+    <div id="Supo">
+        <figure class="field">
+            <img class="supo" src="Images/Supo!.jpg" alt="supo" />
+            <figcaption class="figcap">
+                'Supo' is 'Hello' in Masai language.
+            </figcaption>
+        </figure>
+        <figure class="field">
+            <img class="supo" src="images/Dogon_Hunter.JPG" />
+            <figcaption class="figcap">
+                An 'Ikadethi' in his training phase.
+            </figcaption>
+        </figure>
+        <figure class="field">
+            <img src="Images/join the forces now.jpg" alt="Joining Pic" class="supo" />
+            <figcaption class="figcap">Join the Forces now!</figcaption>
+        </figure>
+    </div>
+    <main>
+        <div id="ceo">
+            <img id="photo" src="Images/photo_2023-06-09_01-18-26.jpg" alt="Aalekh Sharma" style="max-width: 100%" />
+            <p id="aboutMe">
+                <br />
+                <strong> Aalekh Sharma </strong>
+                <br />
+                <br />
+                Directorate General of Masai Force
+                <br />
+                Since 2004
+                <br />
+                Companion of Vimdhayak Akash
+                <br />
+                <br />
+            </p>
+            <p id="contactMe">Contact him</p>
+        </div>
+        <div id="sideform">
+            <h2 id="title">Duty Calls Sign up now! </h2>
+            <form action="https://formspree.io/f/myyaqqdb" method="post">
+                <input class="imput" name="naam" type="text" placeholder="Your name*" required>
+                <br>
+                <input class="imput" name="emailid" type="email" placeholder="youremail@example.com*" required>
+                <br>
+                <input id="submit" type="submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li class="list"><a href="#History" class="anchor">History</a></li>
+            <li class="list"><a href="#aboutMe" class="anchor">Contact DGI</a></li>
+            <li class="list"><a href="#sideform" class="anchor">Sign Up Form</a></li>
+            <li class="list"><a href="#" class="anchor">Null[@]</a></li>
+        </ul>
+        <cite>
+            &copy; Copyright 1999-2023 by Refsnes Data. <br />
+            &reg; All Rights Reserved.</cite>
+    </footer>
+</body>
+
+</html>
