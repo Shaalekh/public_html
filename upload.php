@@ -23,6 +23,7 @@ if (isset($_FILES["fileToUpload"])) {
         echo "Download link: <a href='$fileUrl' target='_blank'>$fileUrl</a><br><br>";
         echo "<h3>QR Code for Download Link:</h3>";
         echo "<img src='$qrCodeUrl' alt='QR Code' style='border:1px solid black;padding:5px; border-radius: 15px;' >";
+        echo "<cite>By order of the peaky blinders";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
