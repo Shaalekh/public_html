@@ -22,39 +22,6 @@
     <button onclick="generateUploadQR()">Generate QR Code for Upload</button>
     <div id="uploadQR"></div>
 
-    <script src="script.js">const express = require('express');
-const multer = require('multer');
-const path = require('path');
-const app = express();
-
-// Set up file storage
-const storage = multer.diskStorage({
-    destination: 'uploads/',
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname));
-    }
-});
-
-const upload = multer({ storage: storage });
-
-// Serve static files
-app.use(express.static('public'));
-
-// Route for mobile upload (Mobile-to-PC)
-app.post('/upload', upload.single('file'), (req, res) => {
-    if (req.file) {
-        res.send('File uploaded successfully!');
-    } else {
-        res.status(400).send('File upload failed');
-    }
-});
-
-// Route to download file (PC-to-Mobile)
-app.get('/download/:filename', (req, res) => {
-    const filepath = path.join(__dirname, 'uploads', req.params.filename);
-    res.download(filepath);
-});
-
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));</script>
+    <script src="script.js"></script>
 </body>
 </html>
