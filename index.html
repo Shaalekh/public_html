@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRSR - File Sharing</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body>
+    <h1>QRSR - File Sharing</h1>
+
+    <!-- PC to Mobile Section -->
+    <h2>PC to Mobile</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="file" name="file" required>
+        <button type="button" onclick="uploadFile()">Generate QR Code</button>
+    </form>
+    <div id="downloadQR"></div>
+
+    <!-- Mobile to PC Section -->
+    <h2>Mobile to PC</h2>
+    <button onclick="generateUploadQR()">Generate QR Code for Upload</button>
+    <div id="uploadQR"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
