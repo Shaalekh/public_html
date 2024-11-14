@@ -19,6 +19,7 @@ if (isset($_FILES["fileToUpload"])) {
         $qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?data=" . urlencode($fileUrl) . "&size=150x150&color=FFFFFF&bgcolor=000000&qzone=2";
         
         // Display success message and QR code
+
         echo "File uploaded successfully ji!<br>";
         echo "Download link: <a href='$fileUrl' target='_blank'>$fileUrl</a><br><br>";
         echo "<h3>QR Code for Download Link:</h3>";
