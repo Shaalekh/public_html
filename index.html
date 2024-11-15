@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
     <title>File Upload</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h2>Upload a File</h2>
+<body id="body">
+   
+    <h1>Upload a File</h1>
+    <div>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload File" name="submit">
+        <input class = "ia" type="file" name="fileToUpload" id="fileToUpload">
+        <input class = "ib" type="submit" value="Upload File" name="submit">
     </form>
+    </div>
+    <footer>
+    <cite>A product of DevAL Corporations Limited.</cite>
+    </footer>
 </body>
 </html>
