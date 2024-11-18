@@ -1,0 +1,98 @@
+body{
+    background-image:url(https://lh5.googleusercontent.com/proxy/xvtq6_782kBajCBr0GISHpujOb51XLKUeEOJ2lLPKh12-xNBTCtsoHT14NQcaH9l4JhatcXEMBkqgUeCWhb3XhdLnD1BiNzQ_LVydwg=w3840-h2160-p-k-no-nd-mv);
+    background-size: cover;
+    background-attachment:fixed;
+    background-repeat: repeat;
+}
+h1 {
+    font-family: 'Raleway';
+    font-weight: 200;
+    font-size: 4em;
+    text-align: center;
+    color: antiquewhite;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:0;
+}
+#main {
+    border: 2px solid black;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:transparent;
+    width:500px;
+    border-radius: 25px;
+    box-shadow:0 0 20px 2px white;
+}
+form {
+    display: grid
+}
+.ia {
+    background-color: transparent;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    border: inset;
+    border-radius: 15px;
+    margin-top: 50px;
+    text-align:center;
+    
+}
+.ib {
+    background-color: transparent;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border:dashed white;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    font-weight:thin;
+    font-size: larger;
+    font-family: sans-serif;
+    color:white;
+}
+
+.ib:hover {
+    color:black;
+    background-color: white;
+    transition-duration: 0.5s    
+}
+cite {
+    margin-top: 500px;
+    color:white;
+    text-align: right;
+    display: inherit;
+}
+.qr-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 15px; /* Rounded corners for QR Code */
+        }
+
+        /* Progress bar styling */
+        #progressContainer {
+            width: 90%;
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            height: 20px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5px;
+        }
+
+        #progressBar {
+            height: 100%;
+            width: 0;
+            background-color: green;
+            border-radius: 5px;
+        }

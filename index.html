@@ -2,51 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="qrsr, qrcode file share,file transfer, qrsr file transfer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload File and Get QR Code</title>
-    <style>
-        .qr-container {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        img {
-            border-radius: 15px; /* Rounded corners for QR Code */
-        }
-
-        /* Progress bar styling */
-        #progressContainer {
-            width: 100%;
-            background-color: #f3f3f3;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            height: 20px;
-            margin-top: 20px;
-        }
-
-        #progressBar {
-            height: 100%;
-            width: 0;
-            background-color: green;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h2>Upload a File and Get QR Code</h2>
-
+    <h1>Upload a File and Get QR Code</h1>
+<div id="main">
     <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload File" name="submit">
-    </form>
-
+        <input class="ia" type="file" name="fileToUpload" id="fileToUpload">
     <div id="result"></div>
     <div class="qr-container" id="qrContainer"></div>
+        <input class="ib" type="submit" value="Upload File" name="submit">
+    </form>
+
 
     <!-- Progress bar container -->
     <div id="progressContainer" style="display: none;">
         <div id="progressBar"></div>
     </div>
+    </div>
+    
+    <cite>A product of DevAl Corporations Limited</cite>
 
     <script>
         // Handle form submission using AJAX
