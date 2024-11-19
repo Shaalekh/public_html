@@ -104,10 +104,13 @@ cite {
         font-size: 2.5em;
     }
     #main {
-        margin-top:50px; 
+        margin-top:60px; 
     }
     cite {
         font-size: smaller;
         
+    }
+    .ib {
+        margin-top: 50px;
     }
 }
