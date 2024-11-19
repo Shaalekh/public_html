@@ -96,3 +96,18 @@ cite {
             background-color: green;
             border-radius: 5px;
         }
+@media screen and (max-width:500px) {
+    #main, .ia,.ib {
+        width: 80%;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    #main {
+        margin-top:50px; 
+    }
+    cite {
+        font-size: smaller;
+        
+    }
+}
