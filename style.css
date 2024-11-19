@@ -23,6 +23,7 @@ h1 {
     width:500px;
     border-radius: 25px;
     box-shadow:0 0 20px 5px;
+    overflow: clip;
 }
 form {
     display: grid
@@ -79,21 +80,20 @@ cite {
 
         /* Progress bar styling */
         #progressContainer {
-            width: 90%;
+            width: 100%;
             background-color: #f3f3f3;
-            border: 1px solid #ddd;
             border-radius: 5px;
-            height: 20px;
+            height: 3px;
             margin-top: 20px;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 5px;
+            margin-bottom: 1px;
         }
 
         #progressBar {
             height: 100%;
             width: 0;
-            background-color: green;
+            background-color: #03ff34;
             border-radius: 5px;
         }
 @media screen and (max-width:500px) {
