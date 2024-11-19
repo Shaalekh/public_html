@@ -97,11 +97,11 @@ img {
     border-radius: 5px;
 }
 #result {
-    color: red;
+    /*color: red;*/
     text-align: center;
     font-family: "geist mono", monospace;
-    background-color: antiquewhite;
-    font-size: 2vh;
+    /*background-color: antiquewhite;*/
+    /*font-size: 2vh;*/
 }
 @media screen and (max-width: 500px) {
     #main,
