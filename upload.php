@@ -80,7 +80,7 @@ if (isset($_FILES["fileToUpload"])) {
         }
         $stmt->close();
     } else {
-        echo json_encode(["error" => "Sorry, there was an error uploading your file."]);
+        echo json_encode(["error" => "&#9888; Sorry, there was an error uploading your file."]);
     }
 } else {
     echo json_encode(["error" => "No file uploaded."]);
