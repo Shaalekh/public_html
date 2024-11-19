@@ -1,5 +1,5 @@
 body{
-    background-image:url(https://lh5.googleusercontent.com/proxy/xvtq6_782kBajCBr0GISHpujOb51XLKUeEOJ2lLPKh12-xNBTCtsoHT14NQcaH9l4JhatcXEMBkqgUeCWhb3XhdLnD1BiNzQ_LVydwg=w3840-h2160-p-k-no-nd-mv);
+    background-image:url(bg.jpg);
     background-size: cover;
     background-attachment:fixed;
     background-repeat: repeat;
@@ -22,7 +22,7 @@ h1 {
     background-color:transparent;
     width:500px;
     border-radius: 25px;
-    box-shadow:0 0 20px 2px white;
+    box-shadow:0 0 20px 5px;
 }
 form {
     display: grid
