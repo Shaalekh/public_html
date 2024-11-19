@@ -167,8 +167,12 @@ footer{
     font-size: smaller;
     margin-left: 15px;
     margin-right: 15px;
+        outline: none;
 }
 .a :hover {
     color: grey;
     transition-duration: 0.3s;
+}
+.a:focus {
+    outline: none;
 }
