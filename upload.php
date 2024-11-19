@@ -65,7 +65,7 @@ if (isset($_FILES["fileToUpload"])) {
         }
         $stmt->close();
     } else {
-        echo '<p style="color: red;text-align: center;background-color: antiquewhite;font-family: \"geist mono\", monospace;font-size: 2vh;"> Sorry, there was an error uploading your file <i class="material-icons">error_outline</i></p>';
+        echo json_encode(['error' => 'Sorry, there was an error uploading your file.']);
     }
 } else {
     echo json_encode(['error' => 'No file uploaded.']);
