@@ -1,32 +1,33 @@
-body{
-    background-image:url('bg.jpg');
-    background-size: cover ;
-    background-attachment:fixed;
-    background-repeat: repeat;
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-attachment:local;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 h1 {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 200;
     font-size: 4em;
     text-align: center;
     color: antiquewhite;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin:0;
+    margin: 0;
 }
 #main {
     border: 2px solid black;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    background-color:transparent;
-    width:500px;
+    background-color: transparent;
+    width: 500px;
     border-radius: 25px;
-    box-shadow:0 0 20px 5px;
+    box-shadow: 0 0 20px 5px;
     overflow: clip;
 }
 form {
-    display: grid
+    display: grid;
 }
 .ia {
     background-color: transparent;
@@ -39,76 +40,83 @@ form {
     border: inset;
     border-radius: 15px;
     margin-top: 50px;
-    text-align:center;
-    
+    text-align: center;
 }
 .ib {
     background-color: transparent;
     width: 200px;
     margin: 10px;
     padding: 10px;
-    border:dashed white;
+    border: dashed white;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    font-weight:thin;
+    font-weight: thin;
     font-size: larger;
     font-family: sans-serif;
-    color:white;
+    color: white;
 }
 
 .ib:hover {
-    color:black;
+    color: black;
     background-color: white;
-    transition-duration: 0.5s    
+    transition-duration: 0.5s;
 }
 cite {
     margin-top: 500px;
-    color:white;
+    color: white;
     text-align: right;
     display: inherit;
 }
 .qr-container {
-            margin-top: 20px;
-            text-align: center;
-        }
+    margin-top: 20px;
+    text-align: center;
+}
 
-        img {
-            border-radius: 15px; /* Rounded corners for QR Code */
-        }
+img {
+    border-radius: 15px; /* Rounded corners for QR Code */
+}
 
-        /* Progress bar styling */
-        #progressContainer {
-            width: 100%;
-            background-color: #f3f3f3;
-            border-radius: 5px;
-            height: 3px;
-            margin-top: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 1px;
-        }
+/* Progress bar styling */
+#progressContainer {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 3px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1px;
+}
 
-        #progressBar {
-            height: 100%;
-            width: 0;
-            background-color: #03ff34;
-            border-radius: 5px;
-        }
-@media screen and (max-width:500px) {
-    #main, .ia,.ib {
+#progressBar {
+    height: 100%;
+    width: 0;
+    background-color: #03ff34;
+    border-radius: 5px;
+}
+#result {
+    color: red;
+    text-align: center;
+    font-family: "geist mono", monospace;
+    background-color: antiquewhite;
+    font-size: 2vh;
+}
+@media screen and (max-width: 500px) {
+    #main,
+    .ia,
+    .ib {
         width: 80%;
     }
-    h1{
+    h1 {
         font-size: 2.5em;
     }
     #main {
-        margin-top:60px; 
+        margin-top: 60px;
     }
     cite {
         font-size: smaller;
-        
     }
     .ib {
         margin-top: 50px;

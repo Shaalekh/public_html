@@ -11,9 +11,10 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     </head>
     <body>
-        <h1 >Quick Response Share Recieve</h1>
+        <h1>Quick Response Share Recieve</h1>
         <div id="main">
             <form id="uploadForm" enctype="multipart/form-data">
                 <input class="ia" type="file" name="fileToUpload" id="fileToUpload" />
@@ -70,7 +71,8 @@
                             document.getElementById("progressContainer").style.display = "none";
                         } else {
                             // Show the file download link
-                            document.getElementById("result").innerHTML = `<p style="color:white;font-family: 'Geist Moto',monospace;margin-left:auto;margin-right:auto;text-align: center;">File uploaded successfully! ✅</p>`;
+                            document.getElementById("result").innerHTML =
+                                `<p style="color:white;font-family: 'Geist Moto',monospace;margin-left:auto;margin-right:auto;text-align: center;">File uploaded successfully! ✅</p>`;
 
                             // Show the QR code
                             var qrCodeUrl = response.qrCodeUrl;
