@@ -71,13 +71,13 @@
                         } else {
                             // Show the file download link
                             document.getElementById("result").innerHTML = `
-<p style="color:white;font-family:'geist moto',monospace;>File uploaded successfully!</p>
+<p style="color:white;font-family:'geist moto',monospace;margin-left:auto;margin-right:auto">File uploaded successfully! &#9989</p>
 `;
 
                             // Show the QR code
                             var qrCodeUrl = response.qrCodeUrl;
                             document.getElementById("qrContainer").innerHTML = `
-                            <h3>QR Code for Download Link:</h3>
+                            <h3 style="color:white;font-family:'geist moto',monospace;margin-left:auto;margin-right:auto">Your QR Code is ready:</h3>
                             <img src="${qrCodeUrl}" alt="QR Code">
                         `;
                         }
