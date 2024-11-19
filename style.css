@@ -3,14 +3,16 @@
     
 }
 
-
-    body {
+html {
     background-image: url("bg.jpg");
     background-size: cover;
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-position: top;
-        margin: auto;
+        margin:auto ;
+}
+body {
+    margin: auto;
 }
 h1 {
     font-family: "geist mono";
