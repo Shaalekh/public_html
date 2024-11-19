@@ -13,12 +13,37 @@
             href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <meta property="og:title" content="QRSR.com - Easy sharing">
-<meta property="og:description" content="A tool to make file transfer from mobile to pc easy through QRcodes.">
-<meta property="og:image" content="https://qrsr.co.in/logo1.jpg">
-<meta property="og:url" content="https://qrsr.co.im">
-<meta property="og:type" content="website">
+        <meta property="og:title" content="QRSR.com - Easy sharing" />
+        <meta
+            property="og:description"
+            content="A tool to make file transfer from mobile to pc easy through QRcodes." />
+        <meta property="og:image" content="https://qrsr.co.in/logo1.jpg" />
+        <meta property="og:url" content="https://qrsr.co.im" />
+        <meta property="og:type" content="website" />
+        <script>
+            // Function to clear all cookies
+            function clearCookies() {
+                const cookies = document.cookie.split(";");
 
+                for (let cookie of cookies) {
+                    const eqPos = cookie.indexOf("=");
+                    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+
+                    // Set cookie expiration to the past
+                    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/`;
+                }
+            }
+
+            // Function to clear all storage (localStorage and sessionStorage)
+            function clearStorage() {
+                localStorage.clear();
+                sessionStorage.clear();
+            }
+
+            // Clear cookies and storage before the page loads fully
+            clearCookies();
+            clearStorage();
+        </script>
     </head>
     <body>
         <h1>Quick Response Share Recieve</h1>
@@ -36,30 +61,30 @@
             </div>
         </div>
 
-            <footer>
-        <ul class="nav">
-            <li class="a">
-                <a class="fanchor" href="#"> Home </a>
-            </li>
-            <li class="a">
-                <a class="fanchor" href="#">Notifications
-                </a>
-            </li>
-            <li class="a">
-                <a class="fanchor" href="#">About us </a>
-            </li>
-            <li class="a">
-                <a class="fanchor" href="#"> Contact us </a>
-            </li>
-            <li class="a">
-                <a class="fanchor" href="#">Special Forces Branch </a>
-            </li>
-        </ul>
-        <hr width="80%" />
-        <cite>
-            &copy; Copyright 1999-2023 by Refsnes Data. <br />
-            &reg; All Rights Reserved.</cite>
-    </footer>
+        <footer>
+            <ul class="nav">
+                <li class="a">
+                    <a class="fanchor" href="#"> Home </a>
+                </li>
+                <li class="a">
+                    <a class="fanchor" href="#">Notifications </a>
+                </li>
+                <li class="a">
+                    <a class="fanchor" href="#">About us </a>
+                </li>
+                <li class="a">
+                    <a class="fanchor" href="#"> Contact us </a>
+                </li>
+                <li class="a">
+                    <a class="fanchor" href="#">Special Forces Branch </a>
+                </li>
+            </ul>
+            <hr width="80%" />
+            <cite>
+                &copy; Copyright 1999-2023 by Refsnes Data. <br />
+                &reg; All Rights Reserved.</cite
+            >
+        </footer>
 
         <script>
             // Handle form submission using AJAX
