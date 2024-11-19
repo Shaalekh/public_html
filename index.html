@@ -1,92 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="qrsr, qrcode file share,file transfer, qrsr file transfer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload File and Get QR Code</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-</head>
-<body>
-    <h1>Upload a File and Get QR Code</h1>
-<div id="main">
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input class="ia" type="file" name="fileToUpload" id="fileToUpload">
-    <div id="result"></div>
-    <div class="qr-container" id="qrContainer"></div>
-        <input class="ib" type="submit" value="Upload File" name="submit">
-    </form>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="qrsr, qrcode file share,file transfer, qrsr file transfer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Upload File and Get QR Code</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Upload a File and Get QR Code</h1>
+        <div id="main">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input class="ia" type="file" name="fileToUpload" id="fileToUpload" />
+                <div id="result"></div>
+                <div class="qr-container" id="qrContainer"></div>
+                <input class="ib" type="submit" value="Upload File" name="submit" />
+            </form>
 
+            <!-- Progress bar container -->
+            <div id="progressContainer" style="display: none">
+                <div id="progressBar"></div>
+            </div>
+        </div>
 
-    <!-- Progress bar container -->
-    <div id="progressContainer" style="display: none;">
-        <div id="progressBar"></div>
-    </div>
-    </div>
-    
-    <cite>A product of DevAl Corporations Limited</cite>
+        <cite>A product of DevAl Corporations Limited</cite>
 
-    <script>
-        // Handle form submission using AJAX
-        document.getElementById("uploadForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent normal form submission
+        <script>
+            // Handle form submission using AJAX
+            document.getElementById("uploadForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent normal form submission
 
-            var formData = new FormData(this);
-            var xhr = new XMLHttpRequest();
+                var formData = new FormData(this);
+                var xhr = new XMLHttpRequest();
 
-            // Reset the result and QR container
-            document.getElementById("result").innerHTML = "";
-            document.getElementById("qrContainer").innerHTML = "";
-            document.getElementById("progressBar").style.width = "0%";
+                // Reset the result and QR container
+                document.getElementById("result").innerHTML = "";
+                document.getElementById("qrContainer").innerHTML = "";
+                document.getElementById("progressBar").style.width = "0%";
 
-            // Show progress bar
-            document.getElementById("progressContainer").style.display = "block";
+                // Show progress bar
+                document.getElementById("progressContainer").style.display = "block";
 
-            // Listen for the progress event
-            xhr.upload.addEventListener("progress", function(e) {
-                if (e.lengthComputable) {
-                    var percentComplete = (e.loaded / e.total) * 100;
-                    document.getElementById("progressBar").style.width = percentComplete + "%";
-                }
-            }, false);
+                // Listen for the progress event
+                xhr.upload.addEventListener(
+                    "progress",
+                    function (e) {
+                        if (e.lengthComputable) {
+                            var percentComplete = (e.loaded / e.total) * 100;
+                            document.getElementById("progressBar").style.width = percentComplete + "%";
+                        }
+                    },
+                    false
+                );
 
-            xhr.open("POST", "upload.php", true);
+                xhr.open("POST", "upload.php", true);
 
-            xhr.onload = function() {
-                if (xhr.status == 200) {
-                    var response = JSON.parse(xhr.responseText);
+                xhr.onload = function () {
+                    if (xhr.status == 200) {
+                        var response = JSON.parse(xhr.responseText);
 
-                    if (response.error) {
-                        document.getElementById("result").innerHTML = `<p style="color: red;">${response.error}</p>`;
-                        document.getElementById("progressContainer").style.display = "none";
-                    } else {
-                        // Show the file download link
-                        document.getElementById("result").innerHTML = `
-                            <p style="color:white;font-family:"Geist moto", monospace;>File uploaded successfully!</p>
-                        `;
+                        if (response.error) {
+                            document.getElementById("result").innerHTML =
+                                `<p style="color: red;">${response.error}</p>`;
+                            document.getElementById("progressContainer").style.display = "none";
+                        } else {
+                            // Show the file download link
+                            document.getElementById("result").innerHTML = `
+<p style="color:white;font-family:'geist moto',monospace;>File uploaded successfully!</p>
+`;
 
-                        // Show the QR code
-                        var qrCodeUrl = response.qrCodeUrl;
-                        document.getElementById("qrContainer").innerHTML = `
+                            // Show the QR code
+                            var qrCodeUrl = response.qrCodeUrl;
+                            document.getElementById("qrContainer").innerHTML = `
                             <h3>QR Code for Download Link:</h3>
                             <img src="${qrCodeUrl}" alt="QR Code">
                         `;
+                        }
+
+                        // Hide the progress bar once the upload is complete
+                        document.getElementById("progressContainer").style.display = "none";
+                    } else {
+                        document.getElementById("result").innerHTML =
+                            "<p style='color: red;'>Error uploading file.</p>";
+                        document.getElementById("progressContainer").style.display = "none";
                     }
+                };
 
-                    // Hide the progress bar once the upload is complete
-                    document.getElementById("progressContainer").style.display = "none";
-                } else {
-                    document.getElementById("result").innerHTML = "<p style='color: red;'>Error uploading file.</p>";
-                    document.getElementById("progressContainer").style.display = "none";
-                }
-            };
-
-            xhr.send(formData); // Send the file data
-        });
-    </script>
-</body>
+                xhr.send(formData); // Send the file data
+            });
+        </script>
+    </body>
 </html>
