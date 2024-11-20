@@ -53,9 +53,31 @@
             clearCookies();
             clearStorage();
         </script>
+        <script>
+    window.addEventListener('mousemove', function(e) {
+      var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+      arr.forEach(function(i) {
+        var x = (1 - i) * 75;
+        var star = document.createElement('div');
+
+        star.className = 'star';
+        star.style.top = e.clientY + Math.round(Math.random() * x - x / 2) + 'px';
+        star.style.left = e.clientX + Math.round(Math.random() * x - x / 2) + 'px';
+
+        document.body.appendChild(star);
+
+        window.setTimeout(function() {
+          document.body.removeChild(star);
+        }, Math.round(Math.random() * i * 600));
+      });
+    }, false);
+</script>
     </head>
     <body>
-        <h1>Quick Response Share Recieve</h1>
+        <h4><a href="#" id="bar">Home</a></h4>
+        <div id="constellation"></div>
+        <h1 id="responsive"></h1>
         <div id="main">
             <form id="uploadForm" enctype="multipart/form-data">
                 <input class="ia" type="file" name="fileToUpload" id="fileToUpload" />
@@ -95,6 +117,7 @@
             >
         </footer>
 
+        <script src="responsive.js" ></script>
         <script>
             // Handle form submission using AJAX
             document.getElementById("uploadForm").addEventListener("submit", function (event) {

@@ -2,7 +2,25 @@
     box-sizing: border-box;
     
 }
+h4, #bar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    margin: 0 0;
+    font-family:'Geist Mono', monospace;
+    font-weight: 500;
+    font-size: 1.55ch;
+    padding: 1px 9px;
+    text-align: end;
+    text-decoration:none;
+    color: black;
+    z-index: 2;
+}
 
+#bar:hover {
+    color:dodgerblue;
+    transition-duration: 0.3s;
+}
 html {
     background-image: url("bg.jpg");
     background-size: cover;
@@ -17,12 +35,12 @@ body {
 h1 {
     font-family: "geist mono";
     font-size: 4em;
-    text-align: center;
+    text-align:center;
     color: whitesmoke;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 0 10px;
     margin: 0;
     font-weight: 100;
+    border-bottom: 1px solid white;
     
 }
 #main {
@@ -38,6 +56,9 @@ h1 {
 }
 form {
     display: grid;
+    border: 1px solid white;
+    border-radius: 25px;
+    
 }
 .ia {
     background-color: transparent;
@@ -125,6 +146,7 @@ img {
     }
     h1 {
         font-size: 2.5em;
+        padding: 15px;
     }
     #main {
         margin-top: 60px;
@@ -143,6 +165,7 @@ footer{
     background-color: rgba(255, 255, 255, 0.11);
     margin-top: 200px;
     padding: 15px;
+    border-top: 1px solid white;
 }
 
     ul {
@@ -175,4 +198,31 @@ footer{
 }
 .a:focus {
     outline: none;
+}
+
+
+
+
+.star {
+	position:fixed;
+	pointer-events: none;
+}
+
+.star:before, .star:after {
+	position:absolute;
+	top: 0;
+	left: 0;
+	content: '\2726';
+	font-size: 9px;
+}
+
+.star:before {
+	color: transparent;
+	text-shadow: 0 0 6px rgb(255, 255, 255);
+}
+
+.star:after {
+	background: #00ff63;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
