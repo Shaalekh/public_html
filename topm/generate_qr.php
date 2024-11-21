@@ -15,6 +15,15 @@ if (!file_exists($uploadDir)) {
 // Generate QR code content
 $qrContent = "https://qrsr.co.in/topm/receive.php?uid=$uniqueID";
 
-// Send QR code directly as PNG without saving it
-header('Content-Type: image/png');
-QRcode::png($qrContent, false, QR_ECLEVEL_L, 10);
+// Send QR code directly as an image
+ob_start();
+QRcode::png($qrContent, null, QR_ECLEVEL_L, 10);
+$qrImage = base64_encode(ob_get_clean());
+
+// Return JSON response
+header('Content-Type: application/json');
+echo json_encode([
+    'uniqueID' => $uniqueID,
+    'qrCodeUrl' => 'data:image/png;base64,' . $qrImage,
+]);
+?>

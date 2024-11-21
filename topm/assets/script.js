@@ -3,16 +3,16 @@ let uniqueID = null;
 document.getElementById('generateBtn').addEventListener('click', () => {
     const qrCode = document.getElementById('qrCode');
     qrCode.style.display = 'block';
-    qrCode.src = 'generate_qr.php';
 
     // Fetch the QR code and unique ID
-   /* fetch('generate_qr.php')
+    fetch('generate_qr.php')
         .then(response => response.json())
         .then(data => {
             qrCode.src = data.qrCodeUrl;
             uniqueID = data.uniqueID;
             fetchFiles(); // Start fetching files
-        });*/
+        })
+        .catch(error => console.error('Error generating QR code:', error));
 });
 
 function fetchFiles() {
@@ -34,7 +34,8 @@ function fetchFiles() {
                 fileList.appendChild(li);
             });
 
-            // Fetch files again after 3 seconds
+            // Re-fetch files every 3 seconds
             setTimeout(fetchFiles, 3000);
-        });
+        })
+        .catch(error => console.error('Error fetching files:', error));
 }
