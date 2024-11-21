@@ -14,14 +14,7 @@ if (!file_exists($uploadDir)) {
 
 // Generate QR code content
 $qrContent = "https://qrsr.co.in/topm/receive.php?uid=$uniqueID";
-$tempQRCodePath = __DIR__ . "/temp_qr_$uniqueID.png";
 
-// Generate and save the QR code temporarily
-QRcode::png($qrContent, $tempQRCodePath, QR_ECLEVEL_L, 10);
-
-// Serve the QR code image to the browser
+// Send QR code directly as PNG without saving it
 header('Content-Type: image/png');
-readfile($tempQRCodePath);
-
-// Delete the QR code image after sending it
-unlink($tempQRCodePath);
+QRcode::png($qrContent, false, QR_ECLEVEL_L, 10);
