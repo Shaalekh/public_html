@@ -1,6 +1,6 @@
 <?php
 // Define the base uploads directory
-$uploadsDir = __DIR__ . '/topm/uploads/';
+$uploadsDir = $_SERVER['DOCUMENT_ROOT'] . '/topm/uploads/';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the subfolder name from the form
