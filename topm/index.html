@@ -16,12 +16,19 @@
             height: 250px;
             display: none;
         }
+        #fileList {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Send Files to Mobile</h1>
     <button id="generateBtn">Generate QR Code</button>
     <img id="qrCode" alt="QR Code">
+    <div id="fileList">
+        <h2>Uploaded Files:</h2>
+        <ul id="files"></ul>
+    </div>
     <script src="assets/script.js"></script>
 </body>
 </html>

@@ -14,6 +14,13 @@ if (!file_exists($uploadDir)) {
 
 // Generate QR code
 $qrContent = "https://qrsr.co.in/topm/receive.php?uid=$uniqueID";
-header('Content-Type: image/png');
-QRcode::png($qrContent, false, QR_ECLEVEL_L, 10);
+$qrCodeFile = "uploads/$uniqueID.png";
+QRcode::png($qrContent, $qrCodeFile, QR_ECLEVEL_L, 10);
+
+// Return response
+header('Content-Type: application/json');
+echo json_encode([
+    'uniqueID' => $uniqueID,
+    'qrCodeUrl' => $qrCodeFile
+]);
 ?>
