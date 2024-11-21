@@ -3,15 +3,16 @@ let uniqueID = null;
 document.getElementById('generateBtn').addEventListener('click', () => {
     const qrCode = document.getElementById('qrCode');
     qrCode.style.display = 'block';
+    qrCode.src = 'generate_qr.php';
 
     // Fetch the QR code and unique ID
-    fetch('generate_qr.php')
+   /* fetch('generate_qr.php')
         .then(response => response.json())
         .then(data => {
             qrCode.src = data.qrCodeUrl;
             uniqueID = data.uniqueID;
             fetchFiles(); // Start fetching files
-        });
+        });*/
 });
 
 function fetchFiles() {
