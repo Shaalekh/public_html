@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code File Upload</title>
+</head>
+<body>
+    <h2>Scan to Upload a File</h2>
+    <div id="qr-code">
+        <img id="qr" alt="QR Code" />
+    </div>
+
+    <script>
+        // Generate the URL dynamically (update "yourdomain.com" to your website URL)
+        const uploadURL = "https://qrsr.co.in/mtop/upload_page.html";
+
+        // Generate QR Code using goqr.me
+        const qrImage = document.getElementById("qr");
+        qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(uploadURL)}&size=200x200`;
+
+        console.log("QR Code Generated for URL:", uploadURL);
+    </script>
+</body>
+</html>
