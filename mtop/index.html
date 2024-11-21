@@ -15,27 +15,20 @@
     </ul>
 
     <script>
-        // Generate a unique session ID
-        const sessionId = Date.now() + Math.random().toString(36).substring(2);
-
-        // Generate the upload URL with the session ID
-        const uploadURL = `https://qrsr.co.in/mtop/upload_page.html?session=${sessionId}`;
-
-        // Display the QR code for the session
+        // Generate the QR code
+        const uploadURL = "https://qrsr.co.in/mtop/upload_page.html";
         const qrImage = document.getElementById("qr");
         qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(uploadURL)}&size=200x200`;
 
-        console.log("QR Code Generated for URL:", uploadURL);
-
-        // Fetch files for the current session
+        // Fetch uploaded files dynamically
         function fetchUploadedFiles() {
-            fetch(`fetch_files.php?session=${sessionId}`)
+            fetch('fetch_files.php') // Backend script to list uploaded files
                 .then(response => response.json())
                 .then(files => {
                     const fileList = document.getElementById("file-list");
                     fileList.innerHTML = ""; // Clear current list
                     files.forEach(file => {
-                        fileList.innerHTML += `<li><a href="uploads/${sessionId}/${file}" target="_blank">${file}</a></li>`;
+                        fileList.innerHTML += `<li><a href="uploads/${file}" target="_blank">${file}</a></li>`;
                     });
                 })
                 .catch(error => console.error('Error fetching files:', error));
