@@ -20,7 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!empty($files)) {
             echo "<h1>Files in Subfolder: $subfolder</h1><ul>";
             foreach ($files as $file) {
-                echo "<li>" . htmlspecialchars($file) . "</li>";
+                $filePath = "/topm/uploads/$subfolder/" . urlencode($file); // Create a relative path for the download link
+                echo "<li><a href=\"$filePath\" download>" . htmlspecialchars($file) . "</a></li>";
             }
             echo "</ul>";
         } else {
