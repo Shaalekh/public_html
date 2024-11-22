@@ -1,6 +1,7 @@
 {
     "livePreviewUseDevServer": false,
-    "livePreviewServerProjectPath": "/",
+    "livePreviewServerProjectPath": "",
     "livePreviewHotReloadSupported": false,
-    "livePreviewFramework": "Custom"
+    "livePreviewFramework": "Custom",
+    "livePreviewServerURL": "http://localhost:8000/topm/receive.php"
 }

@@ -42,7 +42,8 @@ if (isset($_FILES["fileToUpload"])) {
     // Move uploaded file to the target directory
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFilePath)) {
         // Generate the download link
-        $fileUrl = "https://" . $_SERVER["SERVER_NAME"] . "/uploads/" . $uniqueName;
+        $fileUrl = "https://" . $_SERVER['SERVER_NAME'] . "/download.php?file=" . urlencode($uniqueName);
+
 
         // Save details to the database
         $stmt = $conn->prepare(
