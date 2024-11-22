@@ -3,7 +3,12 @@ let uniqueID = null;
 document.getElementById('generateBtn').addEventListener('click', () => {
     const qrCode = document.getElementById('qrCode');
     qrCode.style.display = 'block';
-
+    
+const mainElement = document.getElementById('main');
+    mainElement.style.border = '1px solid white';
+    mainElement.style.boxShadow= '0 0 20px 5px';
+document.getElementById('h2').style.display = 'block';
+    
     // Fetch the QR code and unique ID
     fetch('generate_qr.php')
         .then(response => response.json())
