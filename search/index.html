@@ -8,7 +8,8 @@
             href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Geist+Mono:wght@100..900&family=Monofett&family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
             rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>List Files</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Retrieve Files</title>
 </head>
 <body>
     <h4><a href="#" id="bar">  <i class="fa fa-home"></i> Home</a> <a href="topm/index.html" id="login"> PC to Phone</a> </h4>
@@ -17,6 +18,31 @@
         <input type="text" id="subfolder" name="subfolder" placeholder="Enter the Key" required>
         <button type="submit">Fetch</button>
     </form>
+     <div id="fileList"></div>
     </div>
+
+    <script>
+        // Handle form submission with AJAX
+        $('#subfolderForm').on('submit', function(e) {
+            e.preventDefault(); // Prevent the form from refreshing the page
+
+            // Get the subfolder name
+            const subfolderName = $('#subfolder').val();
+
+            // Send the AJAX request
+            $.ajax({
+                url: 'list_files.php', // PHP script to process the request
+                type: 'POST',
+                data: { subfolder: subfolderName },
+                success: function(response) {
+                    // Display the response in the fileList div
+                    $('#fileList').html(response);
+                },
+                error: function() {
+                    $('#fileList').html('<p>An error occurred while fetching the files.</p>');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
