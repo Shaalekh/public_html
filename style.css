@@ -194,7 +194,7 @@ img {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
 }
 
 #progressBar {
@@ -220,6 +220,7 @@ img {
     h1 {
         font-size: 2.5em;
         padding: 15px;
+        font-family: "geist mono";
     }
     #main {
         margin-top: 60px;
@@ -304,3 +305,11 @@ footer{
 }
 
 */
+
+@media screen and (min-width:800px) {
+    h1 {
+        color: floralwhite;
+        font-size: 4vw !important;
+        font-family: "geist mono" !important;
+    }
+}

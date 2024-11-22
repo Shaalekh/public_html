@@ -8,7 +8,9 @@
             href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Geist+Mono:wght@100..900&family=Monofett&family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
             rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Link your CSS file -->
     <script>
         function fetchFiles(event) {
             event.preventDefault(); // Prevent form from reloading the page

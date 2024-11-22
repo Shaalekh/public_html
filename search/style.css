@@ -104,11 +104,19 @@ form button:hover {
 }
 
 /* File Listing Section */
-
+h2 {
+    color: antiquewhite;
+    font-size: 3vh;
+    text-align: center;
+}
 
 ul {
     list-style: none;
     padding: 0;
+    width: fit-content;
+    text-align: unset;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul li {
