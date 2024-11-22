@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Files</title>
+    <title>Retrieve Files</title>
+     <link
+            href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Geist+Mono:wght@100..900&family=Monofett&family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
+            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="style.css"> <!-- Link your CSS file -->
     <script>
         function fetchFiles(event) {
@@ -32,13 +36,15 @@
     </script>
 </head>
 <body>
-    <h1>List Files in Subfolder</h1>
+    <h4><a href="../index.html" id="bar">  <i class="fa fa-home"></i> Home</a> <a href="topm/index.html" id="login"> PC to Phone</a> </h4>
+    <main>
     <form onsubmit="fetchFiles(event)">
         <input type="text" id="subfolder" name="subfolder" placeholder="Enter Subfolder Name" required>
-        <button type="submit">Submit</button>
+        <button type="submit">Fetch</button>
     </form>
 
     <!-- This is where the files will be displayed -->
     <div id="results" style="margin-top: 20px;"></div>
+    </main>
 </body>
 </html>

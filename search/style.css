@@ -54,7 +54,7 @@ h4 {
                 border-color: dodgerblue;
             }
 /* Form Container */
-div {
+main {
     display: block;
 }
 form {
@@ -128,7 +128,7 @@ p {
 }
 
 @media screen and (max-width:600px) {
-    div {
+    main {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
