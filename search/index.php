@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Files</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS file -->
     <script>
         function fetchFiles(event) {
             event.preventDefault(); // Prevent form from reloading the page
