@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Geist+Mono:wght@100..900&family=Monofett&family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
+            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <title>List Files</title>
 </head>
 <body>
-    <h1>List Files in Subfolder</h1>
+    <h4><a href="#" id="bar">  <i class="fa fa-home"></i> Home</a> <a href="topm/index.html" id="login"> PC to Phone</a> </h4>
+    <div>
     <form action="list_files.php" method="POST">
-        <label for="subfolder">Enter Subfolder Name:</label>
-        <input type="text" id="subfolder" name="subfolder" required>
-        <button type="submit">Submit</button>
+        <input type="text" id="subfolder" name="subfolder" placeholder="Enter the Key" required>
+        <button type="submit">Fetch</button>
     </form>
+    </div>
 </body>
 </html>
