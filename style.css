@@ -48,6 +48,23 @@ html {
         margin:auto ;
     
 }
+.ssl-badge {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    justify-content: center;
+}
+.ssl-badge img {
+    height: 20px;
+}
+
+p {
+    color: aliceblue;
+    font-size: x-small;
+}
 body {
     margin: auto;
 }
@@ -172,7 +189,7 @@ cite {
     color: lightgrey;
     text-align: center;
     display: inherit;
-    font-size: smaller;
+    font-size:xx-small!important;
     font-family: monospace;
     
 }
