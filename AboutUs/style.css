@@ -156,15 +156,14 @@ figcaption {
         flex-direction: column;
     }
     .fellow {
-        font-size: 1.2ch !important;
+        font-size: 1.25ch !important;
     }
     
     h2, #text {
         width:80% !iportant;
     }
-    #text {
-        padding: 15px;
-        font-size: 1.6ch;
+    .text {
+        padding: 3px;
     }
 }
 
