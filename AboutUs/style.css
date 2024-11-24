@@ -185,6 +185,7 @@ figcaption {
     border: 2px solid white;
     background-color: hsla(0,0%,100%,0.4);
     color: black;
+    overflow: auto;
 }
  .review {
     padding:0px 5px ;
