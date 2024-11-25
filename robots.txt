@@ -1,0 +1,8 @@
+# robots.txt for qrsr.co.in
+# Allow all search engines to access and index the entire site.
+
+User-agent: *
+Allow: /
+
+# Sitemap location to help search engines find all your pages
+Sitemap: https://qrsr.co.in/sitemap.xml
