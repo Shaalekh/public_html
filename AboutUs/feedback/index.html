@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="us">
+    <head>
+        <title>Forms</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto&family=Roboto+Slab&display=swap"
+            rel="stylesheet" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-point=1.0" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .kabz {
+                background-color: black !important;
+                color: white !important;
+                transition-duration: 1s;
+            }
+
+            .dast {
+                background-color: darkred !important;
+                transition-duration: 1s;
+            }
+            .fddark {
+                background-color: rgba(0, 0, 0, 0.5) !important;
+            }
+            .natu {
+                background-color: darkred !important;
+                border: 2px solid darkred !important;
+            }
+            .natu:hover {
+                color: white !important;
+            }
+            #button {
+                display: block;
+                float: right;
+                background-color: inherit;
+                border: none;
+                padding: 0;
+                font-size: larger;
+                margin: 0;
+                border: 0;
+                cursor: pointer;
+            }
+
+            #whole {
+                padding: 4vw;
+                border: none;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #frozen {
+                background-image: url("background-scene.jpg");
+                background-attachment: fixed;
+            }
+
+            #heading {
+                background-color: #15407b;
+                color: floralwhite;
+                font-family: "Roboto", sans-serif;
+                margin: 0;
+                display: block;
+                padding: 2vw 2vw;
+                transition-duration: 1s;
+            }
+
+            #formee {
+                padding: 5%;
+            }
+
+            input,
+            select {
+                font-family: "Roboto Slab", serif;
+                border: none;
+                outline: none;
+            }
+
+            #fieldsat {
+                background-color: rgba(255, 255, 255, 0.3);
+                border: none;
+                font-family: "Raleway", system-ui;
+                transition-duration: 1s;
+            }
+
+
+            cite {
+                font-size: smaller;
+                text-align: right !important;
+                display: block;
+                margin-top: 25vh;
+            }
+            /*#sublock {
+            width:100%;
+        }*/
+
+            #submit {
+                color: azure;
+                background-color: rgb(59, 111, 153);
+                border: 2px solid rgb(59, 111, 153);
+                float: left;
+                width: 89%;
+                padding: 2vh 0px;
+            }
+            #submit:hover {
+                border: 2px solid rgb(44, 79, 108);
+                background-color: white;
+                color: rgb(44, 79, 108);
+                transition-duration: 1s;
+            }
+            #reset {
+                float: left;
+                padding: 2vh 0px;
+                width: 11%;
+                font-weight: bold;
+                border: 2px solid white;
+            }
+            #reset:hover {
+                border: 2px solid black;
+                transition-duration: 500ms;
+            }
+            @media screen and (max-width : 600px) {
+                #whole {
+                    width: 100%;
+                    margin-top: 100px
+                }
+                #heading {
+                    font-size: larger;
+                }
+                #email, #text {
+                    width: 100% !important;
+                }
+            }
+        </style>
+    </head>
+
+    <body id="frozen">
+        <div id="whole">
+            <h1 id="heading">Your Feedback matters.</h1>
+            <fieldset id="fieldsat">
+                <!-- <legend>Fill this form carefully.</legend> -->
+                <div id="formee">
+                    <button id="button" type="button" onclick="myFunction(event)">&#x1f313;</button>
+                    <form id="formes" action="https://formspree.io/f/xpzegrrz" autocomplete="on" method="post">
+                        
+                        <input type="text" id="fname" name="First Name" required placeholder=" Name" style="height: 30px; width: 80%" />
+                        <br>
+                        <br />
+                        <input type="radio" class="sex" name="sex" value="male" required /> Male &emsp;
+                        <input type="radio" class="sex" name="sex" value="female" /> Female
+                        <br />
+                        
+                        <br />
+                        
+                        <input type="email" id="email" name="Phone" maxlength="50" placeholder="  youremail@example.com" style="width: 80%; height: 30px" />
+                        <br />
+                        <br />
+                        <textarea id="text" placeholder="Your message..." name="response style" style="width: 80%" rows="5" ></textarea>
+                        <br/>
+                        <br />
+                    </form>
+                </div>
+                <div id="sublock">
+                    <input id="submit" form="formes" type="submit" value="Submit" />
+                    <input id="reset" form="formes" type="reset" value="&#8634;" />
+                </div>
+            </fieldset>
+        </div>
+            <cite>
+                 &reg; Site is managed by CSM</cite
+            >
+        <script>
+            function myFunction() {
+                const goo = document.getElementById("frozen");
+                goo.classList.toggle("kabz");
+                const poo = document.getElementById("heading");
+                poo.classList.toggle("dast");
+                const soo = document.getElementById("fieldsat");
+                soo.classList.toggle("fddark");
+                const loo = document.getElementById("submit");
+                loo.classList.toggle("natu");
+            }
+        </script>
+    </body>
+</html>
