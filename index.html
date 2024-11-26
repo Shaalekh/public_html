@@ -2,18 +2,20 @@
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7X78EMCP1Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7X78EMCP1Z"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-7X78EMCP1Z');
-</script>
+            gtag("config", "G-7X78EMCP1Z");
+        </script>
         <meta charset="UTF-8" />
         <meta name="keywords" content="qrsr, qrcode file share,file transfer, qrsr file transfer" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google-adsense-account" content="ca-pub-6240048814964000">
+        <meta name="google-adsense-account" content="ca-pub-6240048814964000" />
         <title>QRSR</title>
         <link rel="icon" type="image/png" href="qr-code.256x256.png" />
         <link rel="stylesheet" href="style.css" />
@@ -55,31 +57,49 @@
             clearStorage();
         </script>
         <script>
-    window.addEventListener('mousemove', function(e) {
-      var arr = [1, 0.9, 0.8, 0.5, 0.2];
+            window.addEventListener(
+                "mousemove",
+                function (e) {
+                    var arr = [1, 0.9, 0.8, 0.5, 0.2];
 
-      arr.forEach(function(i) {
-        var x = (1 - i) * 75;
-        var star = document.createElement('div');
+                    arr.forEach(function (i) {
+                        var x = (1 - i) * 75;
+                        var star = document.createElement("div");
 
-        star.className = 'star';
-        star.style.top = e.clientY + Math.round(Math.random() * x - x / 2) + 'px';
-        star.style.left = e.clientX + Math.round(Math.random() * x - x / 2) + 'px';
+                        star.className = "star";
+                        star.style.top = e.clientY + Math.round(Math.random() * x - x / 2) + "px";
+                        star.style.left = e.clientX + Math.round(Math.random() * x - x / 2) + "px";
 
-        document.body.appendChild(star);
+                        document.body.appendChild(star);
 
-        window.setTimeout(function() {
-          document.body.removeChild(star);
-        }, Math.round(Math.random() * i * 600));
-      });
-    }, false);
-</script>
-        
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        window.setTimeout(
+                            function () {
+                                document.body.removeChild(star);
+                            },
+                            Math.round(Math.random() * i * 600)
+                        );
+                    });
+                },
+                false
+            );
+        </script>
+        <!-- TrustBox script -->
+        <script
+            type="text/javascript"
+            src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+            async></script>
+        <!-- End TrustBox script -->
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
     <body>
-        <h4><a href="#" id="bar">  <i class="fa fa-home"></i> Home</a> <a href="topm/index.html" id="login"> Phone to PC</a> </h4>
+        <h4>
+            <a href="#" id="bar"> <i class="fa fa-home"></i> Home</a>
+            <a href="topm/index.html" id="login"> Phone to PC</a>
+        </h4>
         <div id="constellation"></div>
         <h1 id="responsive"></h1>
         <div id="main">
@@ -95,8 +115,16 @@
                 <div id="progressBar"></div>
             </div>
         </div>
-
+        <p id="norton" style="text-align: center; font-size: smaller">
+            Scanned by
+            <img
+                style="background-color: white; border-radius: 50%; font-family: &quot;geist mono&quot;, monospace"
+                src="norton.svg" />
+            NOROTN <sup>TM</sup> Web Safe
+        </p>
+<div style="margin-top: 180px">
         <footer>
+
             <ul class="nav">
                 <li class="a">
                     <a class="fanchor" href="#"> Home </a>
@@ -108,30 +136,45 @@
                     <a class="fanchor" href="AboutUs/index.html">About us </a>
                 </li>
                 <li class="a">
-                    <a class="fanchor" href="https://www.termsfeed.com/live/e74bf171-fbad-4d25-8fe4-ea38f2ca6072"> Privacy policy </a>
+                    <a class="fanchor" href="https://www.termsfeed.com/live/e74bf171-fbad-4d25-8fe4-ea38f2ca6072">
+                        Privacy policy
+                    </a>
                 </li>
                 <li class="a">
                     <a class="fanchor" href="topm/index.html">Phone to PC </a>
                 </li>
             </ul>
-            <hr width="80%" style="margin-left: auto; margin-right: auto; margin-top: 0px;" />
+            <hr width="80%" style="margin-left: auto; margin-right: auto; margin-top: 0px" />
             <div class="ssl-badge">
-    <img title="Our site is protected with industry-standard SSL encryption to keep your data safe." src="ssl-removebg-preview%20(1).png" alt="Secure Site">
-    <p>Secure Site with SSL</p>
-                 <img title="We respect your privacy. Learn more about how we handle your data." src="legal-compliance.png" alt="legal compliant" style="margin-left: 2ch">
-                <p><a href="#" style="text-decoration: none;" >Privacy Compliance</a> </p>
-                
-</div>
+                <img
+                    title="Our site is protected with industry-standard SSL encryption to keep your data safe."
+                    src="ssl-removebg-preview%20(1).png"
+                    alt="Secure Site" />
+                <p>Secure Site with SSL</p>
+                <img
+                    title="We respect your privacy. Learn more about how we handle your data."
+                    src="legal-compliance.png"
+                    alt="legal compliant"
+                    style="margin-left: 2ch" />
+                <p><a href="#" style="text-decoration: none">Privacy Compliance</a></p>
+            </div>
+            <div style="margin-top: 10px"
+                class="trustpilot-widget"
+                data-locale="en-US"
+                data-template-id="56278e9abfbbba0bdcd568bc"
+                data-businessunit-id="6745be18bfd7b10d266603f0"
+                data-style-height="52px"
+                data-style-width="100%">
+                <a href="https://www.trustpilot.com/review/qrsr.co.in" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
 
-            <cite style="margin-top: 0px; padding: 0;">
-                &copy;  Copyright 1999-2024
-            </cite>
-            <cite style="text-align:center; margin-bottom: 0px !important; margin-top: 0px; padding: 0px !important;" >A product of DevAl Corporations Limited.</cite>
-            
-           
+            <cite style="margin-top: 0px; padding: 0"> &copy; Copyright 1999-2024 </cite>
+            <cite style="text-align: center; margin-bottom: 0px !important; margin-top: 0px; padding: 0px !important"
+                >A product of DevAl Corporations Limited.</cite
+            >
         </footer>
-
-        <script src="responsive.js" ></script>
+        </div>
+        <script src="responsive.js"></script>
         <script>
             // Handle form submission using AJAX
             document.getElementById("uploadForm").addEventListener("submit", function (event) {
