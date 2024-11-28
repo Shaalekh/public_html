@@ -7,6 +7,7 @@
      <link
             href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Geist+Mono:wght@100..900&family=Monofett&family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
             rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../qr-code%20(1).png" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
