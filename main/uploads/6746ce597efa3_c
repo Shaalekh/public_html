@@ -1,0 +1,9 @@
+ #include<stdio.h> 
+    int x=3,4,5,...n;
+    printf("eligible if p=<2");
+    else 
+    printf("not eligible ");
+    getch()
+    return 0
+    
+} 

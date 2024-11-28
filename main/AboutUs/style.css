@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 17px),
+        repeating-linear-gradient(#5132cf55, #5132cf);
+    background-repeat: round;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    margin: 0px 0px !important;
+    font-family: "Geist Mono", monospace;
+    z-index: 2;
+    padding: 1px 0px;
+    text-align: start;
+}
+#bar {
+    text-align: left;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3ch;
+    color: black;
+    padding: 0px 10px;
+}
+
+#login {
+    font-size: 1.3ch;
+    font-family: "geist mono", monospace;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0px 10px;
+    text-align: end;
+    float: inline-end;
+    margin: 0px 4px;
+    margin-top: 1px;
+    background-color: rgb(0, 0, 0, 0);
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#bar:hover,
+#login:hover {
+    color: dodgerblue;
+    transition-duration: 0.2s;
+    border-color: dodgerblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid white;
+    background-color: hsla(0,0%,0%, 0.1);
+    margin-top: 0;
+}
+@media screen and (max-width: 600px) {
+    html {
+        background-size: cover;
+    }
+}
+
+.row1 {
+    display: grid;
+    margin-top: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    margin-bottom: 10px;
+}
+
+.boxgrid {
+    margin: 3%;
+}
+
+.intro {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px 0px;
+    margin: 0;
+    border: 1px solid white;
+    font-family: "geist mono", monospace;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom: 1px solid black;
+}
+
+.p {
+    font-family: "geist mono", monospace;
+    /*background-color: rgb(215, 255, 156);*/
+    background-color: white;
+    text-align: justify;
+    padding: 2vh;
+    margin: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.row2 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+#h2 {
+    margin: 0;
+    text-align: center;
+    background-color: hsla(0,0%,15%,0.8);
+    border: 1px solid hsla(0,0%,0%, 1);
+    border-bottom: none;
+    outline: none;
+    justify-content: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    color: snow;
+    font-family: "cutive mono", monospace;
+    font-weight: 600;
+    
+}
+.column {
+    padding: 10px;
+    font-family: "geist mono", monospace;
+    font-size: 13px;
+}
+h3 {
+    font-family: "cutive mono",monospace;
+    font-weight: 600;
+}
+.desg {
+    color: white;
+}
+img {
+    border-radius: 50%;
+}
+figcaption {
+    color: white;
+}
+.breif {
+    color: white;
+    padding: 0 10px;
+}
+@media (max-width: 800px) {
+    .row2 {
+        flex-direction: column;
+    }
+    .fellow {
+        font-size: 1.25ch !important;
+    }
+    
+    h2, #text {
+        width:80% !iportant;
+    }
+    .text {
+        padding: 3px;
+    }
+}
+
+.lower {
+    margin-top: 2em;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+
+}
+.fellow {
+    margin: 5%;
+    display: inline-flex;
+    border-radius: 50px;
+    font-size: 1.4ch;
+    height: 100px;
+    font-family: "geist mono", monospace;
+    border: 2px solid white;
+    background-color: hsla(0,0%,100%,0.4);
+    color: black;
+    overflow: auto;
+}
+ .review {
+    padding:0px 5px ;
+}
+span {
+    text-align:end;
+    float: right;
+    margin-right: 25px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0;
+    background-color: #431df0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 20px;
+    color: white;
+    font-family: "geist mono", monospace;
+}
+
+#text {
+    margin-bottom: 80px;   
+    margin-top: 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "geist mono", monospace;
+    background-color: hsla(0,0%,100%,0.7);
+    padding: 10px;
+}
