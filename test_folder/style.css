@@ -1,9 +1,24 @@
 * {
     box-sizing: border-box;
+
 }
 header {
     background-image: linear-gradient(to bottom left, #E3F2FD 10% ,white 50%);
     
+}
+
+@media (min-width: 768px) {
+    .g-md-24, .gx-md-24 {
+        --x-gutter-x: unset !important;
+    }
+}
+@media (max-width: 768px) {
+.g-16, .gx-16 {
+     --x-gutter-x: unset !important; 
+}
+    h5 {
+        margin-top: 1rem !important;
+    }
 }
 .footer {
             background-color: #212529;
@@ -58,4 +73,3 @@ header {
             text-align: center;
             color: #adb5bd;
         }
-@media screen and (m)
