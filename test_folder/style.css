@@ -6,7 +6,9 @@ header {
     background-image: linear-gradient(to bottom left, #E3F2FD 10% ,white 50%);
     
 }
-
+#logos:hover {
+    box-shadow: none !important;
+}
 @media (min-width: 768px) {
     .g-md-24, .gx-md-24 {
         --x-gutter-x: unset !important;
