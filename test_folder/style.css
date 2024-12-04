@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    
 
 }
 header {
@@ -15,7 +16,7 @@ header {
     }
 }
 @media (max-width: 768px) {
-.g-16, .gx-16 {
+.g-16, .gx-16, .g-20, .gx-20 {
      --x-gutter-x: unset !important; 
 }
     h5 {
